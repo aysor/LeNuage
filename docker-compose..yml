@@ -1,0 +1,21 @@
+services:
+  server:
+    image: cloudservice
+    container_name: "cloud_service"
+    ports:
+      - "8080:8080"
+    depends_on:
+      - cloud
+    environment:
+      DATABASE_URL: "postgresql://netology_user:111@cloud:5432/cloud"
+    build: ./
+
+  cloud:
+    image: postgres
+    container_name: "cloud"
+    environment:
+      POSTGRES_DB: "cloud"
+      POSTGRES_USER: "netology_user"
+      POSTGRES_PASSWORD: "111"
+    ports:
+      - "5432:5432"
