@@ -1,7 +1,7 @@
 ## Описание проекта
 
 Разработан REST-сервис. Сервис предоставляет REST-интерфейс для загрузки файлов и вывода списка уже загруженных файлов пользователя.
-Данный сервис является бэкэндом для веб-приложения [(FRONT)](https://github.com/netology-code/jd-homeworks/tree/master/diploma/netology-diplom-frontend)
+Данный сервис является бэкэндом для веб-приложения [(FRONT)](https://github.com/netology-code/jd-homeworks/tree/master/diploma/netology-diplom-frontend).
 FRONT совершает запрорсы к бэкэнду по порту 8080.
 При старте бэкэнд в заранее созданной базе cloud создает таблицы и заполняет их тестовыми данными с использованием миграцмй.
 

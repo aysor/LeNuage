@@ -1,6 +1,7 @@
 package ru.netology.cloudservice.controller;
 
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -19,6 +20,7 @@ import ru.netology.cloudservice.service.FileStorageService;
 import java.util.List;
 import java.util.Optional;
 
+@Slf4j
 @RestController
 @RequiredArgsConstructor
 public class FileStorageController {
@@ -44,6 +46,7 @@ public class FileStorageController {
 
         try {
             fileStorageService.upload(fileName, file, user);
+            log.info("File was successfully uploaded!!!");
             return ResponseEntity.ok("Success upload");
 
         } catch (Exception e) {

@@ -6,6 +6,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.multipart.MultipartFile;
 import ru.netology.cloudservice.model.entity.FileEntity;
 import ru.netology.cloudservice.model.entity.UserEntity;
@@ -14,6 +15,7 @@ import ru.netology.cloudservice.repository.FileStorageRepository;
 import java.io.IOException;
 import java.util.List;
 
+@Slf4j
 @Service
 @RequiredArgsConstructor
 public class FileStorageService {
@@ -53,7 +55,7 @@ public class FileStorageService {
         try {
             fileStorageRepository.deleteByUser_NameAndFileName(userName, filename);
         }catch(Exception ex){
-            System.out.println(ex);
+            log.info(ex.toString());
         }
     }
 }

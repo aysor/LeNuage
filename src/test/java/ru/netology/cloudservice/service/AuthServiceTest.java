@@ -1,4 +1,4 @@
-package ru.netology.cloudservice;
+package ru.netology.cloudservice.service;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -15,7 +15,6 @@ import ru.netology.cloudservice.model.dto.AuthResponse;
 import ru.netology.cloudservice.model.entity.UserEntity;
 import ru.netology.cloudservice.repository.AuthRepository;
 import ru.netology.cloudservice.security.JwtTokenProvider;
-import ru.netology.cloudservice.service.AuthService;
 
 import java.util.Optional;
 
